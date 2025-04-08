@@ -39,5 +39,60 @@ void main(List<String> args) {
   // tipe data map
   // contoh 1
   // memberi value map kosong
+  Map tempatTinggal = {};
+  // menambah key dan valuenya
+  tempatTinggal['Andi'] = 'Planet Ngawi';
+  print('nilai map (analogi: tempat tinggal): $tempatTinggal');
+
+  // contoh 2
+  // langsung memberi beberapa value map dengan 'key' dengan 'value'
+  Map peliharaan = {
+    'lulu': 'kelinci',
+    'mico': 'kucing',
+    'buzz': 'biawak',
+  };
+  print('nilai map (analogi: peliharaan): $peliharaan');
+
+  // tipe data set
+  // memberi value set kosong
+  Set<String> kumpulanNama = {};
+
+  // menambahkan data ke dalam set
+  kumpulanNama.add('Laila');
+  kumpulanNama.add('Elsa');
+  print('kumpulan nama: $kumpulanNama');
+
+  // langsung memberi value ke dalam set
+  var karakterKartun = <String>{
+    'Naruto',
+    'Sasuke',
+    'Hinata',
+    'Neji',
+  };
+
+  // menambahkan data ke dalam set
+  karakterKartun.add('Sakura');
+  print('karakter kartun: $karakterKartun');
+  // mencoba menambahkan data sama, tidak akan ditambahkan ke dalam set
+  karakterKartun.add('Naruto');
+  print('karakter kartun: $karakterKartun');
+
+  // menghapus data dari set
+  karakterKartun.remove('Naruto');
+  karakterKartun.remove('Sakura');
+  karakterKartun.remove('Neji');
+  // jika menghapus value yang tidak ada di set, tidak akan error karena set tidak memiliki index/key
+  karakterKartun.remove('Tanpa Nama');
+  print('karakter kartun = $karakterKartun');
+
+  // mendapatkan panjang set
+  print('panjang set karakterKartun: ${karakterKartun.length}');
+  print('panjang set kumpulanNama: ${kumpulanNama.length}');
+
+  // tipe data symbol
+  var symbolVariable1 = #symbol;
+  Symbol symbolVariable2 = Symbol('Sebuah Symbol');
+  print(symbolVariable1); // Symbol("symbol")
+  print(symbolVariable2); // Symbol("Sebuah Symbol")
 
 }
